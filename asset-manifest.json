@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Carl_Jasper_Ramos/static/css/main.2af32397.css",
+    "main.js": "/Carl_Jasper_Ramos/static/js/main.4931d54d.js",
+    "static/js/488.b2f448f2.chunk.js": "/Carl_Jasper_Ramos/static/js/488.b2f448f2.chunk.js",
+    "static/media/logo.svg": "/Carl_Jasper_Ramos/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Carl_Jasper_Ramos/index.html",
+    "main.2af32397.css.map": "/Carl_Jasper_Ramos/static/css/main.2af32397.css.map",
+    "main.4931d54d.js.map": "/Carl_Jasper_Ramos/static/js/main.4931d54d.js.map",
+    "488.b2f448f2.chunk.js.map": "/Carl_Jasper_Ramos/static/js/488.b2f448f2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2af32397.css",
+    "static/js/main.4931d54d.js"
+  ]
+}
