@@ -3,8 +3,9 @@ function Contact(){
 
 
     return(
-        <div className="border font-itim md:overflow-visible overflow-scroll flex flex-col bg-background px-5 py-[31.5px] md:h-[500px] h-[530px] md:my-14 border-black ">
-            <h1 className="text-center text-2xl md:mb-8">Contact Me</h1>
+        <div className="border md:overflow-hidden overflow-scroll bg-background py-[31.5px] md:h-svh h-[85%] w-svw md:items-center flex md:flex-column md:flex-wrap flex-col 
+    md:justify-evenly border-black">
+            <h1 className="text-center text-2xl md:mt-8">Contact Me</h1>
 
             <form className="mx-auto border rounded-lg py-[10px] px-[10px] md:w-[600px] my-auto w-full border-black" action="">
                 <div>

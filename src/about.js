@@ -5,16 +5,17 @@ import { fadeIn } from "./variants";
 function About(){
 
     return(
-        <div className="border font-itim text-center md:overflow-visible overflow-scroll flex flex-col bg-background px-5 py-[31.5px] md:h-[500px] h-[530px] md:my-14 border-black ">
-            <motion.h1 className='mb-3 text-3xl font-bold'
+        <div className="border overflow-y-scroll bg-background py-[31.5px] md:h-svh h-[85%] w-svw md:items-center flex md:flex-row md:flex-wrap flex-col 
+                        md:justify-evenly border-black">
+            <motion.h1 className='mt-5 text-3xl font-bold '
                         variants={fadeIn('up', 0.2)}
                         initial='hidden'
                         whileInView={'show'}
                         viewport={{ once:true }}
                         >About Me</motion.h1>
-            <div className='flex justify-around items-center flex-wrap'>
+            <div className='flex justify-around content-evenly items-center flex-wrap'>
                  <motion.div variants={fadeIn('up', 0.3)} initial="hidden" whileInView={'show'} viewport={{ once:true }}>
-                    <img className='md:h-[350px] md:w-[350px] md:rounded-none rounded-full h-[100px] w-[100px] shadow-md shadow-black' src={myImg} alt="" />
+                    <img className='md:h-[350px] md:w-[350px] md:rounded-none mx-5 my-5 rounded-full h-[100px] w-[100px] shadow-md shadow-black' src={myImg} alt="" />
                 </motion.div>
                 <div className='flex flex-col md:justify-evenly md:h-full md:w-[800px] h-[400px]'>
                     <motion.div className='grid justify-evenly md:grid-cols-3 gap-y-5 md:gap-y-0 mt-4 md:mt-0 gap-x-10 flex-wrap w-full'

@@ -23,7 +23,7 @@ function App() {
 
   return (
     <Router>
-      <div className='container bg-background md:h-full xl:h-svh w-svw h-svh md:px-[60px] px-[10px] py-[20px] md:py-0'> 
+      <div className='container m-0 p-0 bg-background md:h-svh md:w-svw w-svw h-svh'> 
         <Navbar onClickNav={handleClickSection} />
         {showSection === "home" && <Hero />}
         {showSection === "projects" && <Projects />}

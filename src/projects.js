@@ -40,7 +40,9 @@ function Projects(){
 
 
     return(
-        <div className="border font-itim bg-background px-5 py-0 md:py-[31.5px] md:h-[500px] h-[530px] md:items-center md:my-14 flex md:flex-wrap flex-col-reverse md:justify-evenly border-black" >
+        <div className="border font-itim bg-background px-5 py-0 
+                        md:py-[31.5px] md:h-[500px] h-[530px] md:items-center 
+                        md:my-14 flex md:flex-wrap flex-col-reverse md:justify-evenly border-black" >
            <div className="project-container flex flex-col w-fit overflow-scroll md:full mx-auto  md:justify-evenly h-full py-3 my-5 md:my-0">
                 <motion.h1 className="text-center text-[30px] font-bold mb-2"
                            variants={fadeIn('up', 0.3)}

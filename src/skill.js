@@ -6,7 +6,8 @@ library.add( faHtml5, faCss3, faJs, faGithub, faGitAlt, faCode, faReact )
 function Skills(){
 
     return(
-        <div className="border font-itim md:overflow-visible overflow-scroll flex flex-col bg-background px-5 py-[31.5px] md:h-[500px] h-[530px] md:my-14 border-black ">
+        <div className="border md:overflow-hidden overflow-scroll bg-background py-[31.5px] md:h-svh h-[85%] w-svw md:items-center flex md:flex-row md:flex-wrap flex-col 
+    md:justify-evenly border-black">
             <div className="text-center">
                 <h1 className='text-3xl'>Skills</h1>
                 <p>My Technical Level</p>
