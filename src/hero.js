@@ -22,7 +22,7 @@ function Hero(){
     ];
 
     return(
-    <div className="border md:overflow-hidden overflow-scroll bg-background py-[31.5px] md:h-svh h-[85%] w-svw md:items-center flex md:flex-row md:flex-wrap flex-col 
+    <div className="border md:overflow-hidden overflow-scroll bg-background p-[30px] md:m-0  md:h-svh h-[90%] w-svw md:items-center flex md:flex-row md:flex-wrap flex-col 
                     md:justify-evenly border-black">
         <div className='flex flex-col justify-evenly md:justify-between md:h-[300px]'>
             <div className='text-center md:w-[600px]'>

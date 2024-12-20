@@ -5,9 +5,9 @@ import { fadeIn } from "./variants";
 function About(){
 
     return(
-        <div className="border overflow-y-scroll bg-background py-[31.5px] md:h-svh h-[85%] w-svw md:items-center flex md:flex-row md:flex-wrap flex-col 
+        <div className="border overflow-y-scroll bg-background py-[31.5px] px-2 md:h-svh h-[85%] w-svw md:items-center flex md:flex-row md:flex-wrap flex-col 
                         md:justify-evenly border-black">
-            <motion.h1 className='mt-5 text-3xl font-bold '
+            <motion.h1 className='mt-10 text-3xl font-bold text-left w-full'
                         variants={fadeIn('up', 0.2)}
                         initial='hidden'
                         whileInView={'show'}
@@ -24,7 +24,7 @@ function About(){
                                 whileInView={'show'}
                                 viewport={{ once:true }}
                                 >
-                        <div className='h-[150px] md:h-full rounded-md shadow-md md:px-4 md:py-2'>
+                        <div className='h-full md:h-full rounded-md shadow-md md:px-4 md:py-2'>
                             <h1 className='text-xl font-semibold'>EXPERIENCE</h1>
                             <motion.hr  class="border-0 h-[2px] bg-black"
                                         initial={{ width: '0%' }}
@@ -35,7 +35,7 @@ function About(){
                                 and it's been almost 3years now.
                             </p>
                         </div>
-                        <div className='h-[150px] md:h-full rounded-md shadow-md md:px-4 md:py-2'>
+                        <div className='h-full md:h-full rounded-md shadow-md md:px-4 md:py-2'>
                             <h1 className='text-xl font-semibold'>EDUCATION</h1>
                             <motion.hr  class="border-0 h-[2px] bg-black"
                                         initial={{ width: '0%' }}
@@ -46,7 +46,7 @@ function About(){
                                 ,the course that I will take in college is Computer Science.
                             </p>
                         </div>
-                        <div className='h-[150px] md:h-full rounded-md shadow-md md:px-4 md:py-2'>
+                        <div className='h-full md:h-full rounded-md shadow-md md:px-4 md:py-2'>
                             <h1 className='text-xl font-semibold'>GOAL</h1>
                             <motion.hr  class="border-0 h-[2px] bg-black"
                                         initial={{ width: '0%' }}

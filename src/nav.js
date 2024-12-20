@@ -17,7 +17,7 @@ function Navbar({ onClickNav }) {
   const paths = ['/home', '/projects', '/about', '/skills', '/contact'];
 
   return (
-    <div className="fixed flex md:top-0 md:bottom-full bottom-0 left-0 mx-auto w-svw">
+    <div className="fixed flex md:top-0 md:bottom-full bottom-5 left-0 mx-auto w-svw">
       <motion.ul
         className="flex justify-evenly border left-0 top-0 md:mb-0 backdrop-blur-3xl md:backdrop-blur-0 border-black 
          h-12 w-full items-center font-bold relative mx-auto md:h-[70px] md:border-none rounded-full 
