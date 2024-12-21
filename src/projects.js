@@ -41,7 +41,7 @@ function Projects(){
 
     return(
         <div className="border font-itim bg-background px-5 py-0 
-                        md:h-svh h-[530px] md:w-svw md:items-center 
+                        md:h-svh h-[90%] md:w-svw md:items-center 
                         flex md:flex-wrap md:flex-col flex-col-reverse md:justify-evenly border-black" >
            <div className="project-container flex flex-col w-fit overflow-y-scroll md:full mx-auto md:justify-evenly h-full py-3 my-5 md:my-0">
                 <motion.h1 className="text-left text-[30px] font-bold mb-2 md:mt-10"
@@ -51,20 +51,16 @@ function Projects(){
                            viewport={{ once:true }}
                            >My Projects</motion.h1> 
 
-            <div className="grid md:grid-cols-2 md:gap-5 gap-1">
+            <div className="grid md:grid-cols-2 gap-1">
              {projectsContainer.map((work, index) =>  (
-            <motion.div className="md:w-full mt-5 h-fit overflow-hidden md:h-full flex flex-col text-center p-4 md:p-5 md:rounded-md"
+            <motion.div className="md:w-full md:mt-0 h-fit overflow-hidden md:h-full flex flex-col text-center p-4 md:p-5 md:rounded-md"
                         variants={fadeIn('up', 0.4)}
-                        whileHover={{
-                            scale: 0.9,
-                            transition: { duration: 0.3 },
-                          }}
                         whileTap={{ scale: 0.7 }}
                         initial="hidden"
                         whileInView={'show'}
                         viewport={{once: true, amount:0.2}} 
                  onClick={() => handleActiveProject(work.src, index)}>
-                <img className="md:h-[150px] w-full md:w-[250px] h-full shadow-md mx-auto rounded" key={index} src={work.src} alt="" />
+                <img className="md:h-[150px] w-full md:w-[250px] h-full hover:-translate-y-3 ease-in-out transition-all duration-300 shadow-md mx-auto rounded" key={index} src={work.src} alt="" />
                 <h1 className="hover:text-red-600 mt-2" key={index}>{work.title}</h1>
                 <motion.hr class="border-0 h-[2px] bg-black"            
                            initial={{ width: '0%' }}
@@ -77,12 +73,12 @@ function Projects(){
            </div>
     <div className="md:h-fit md:w-fit h-full md:overflow-visible">
 
-        <motion.div className="shadow-2xl md:p-4 p-3 rounded-xl my-5"
+        <motion.div className="shadow-2xl w-1/2 md:w-full mx-auto md:p-4 p-2 rounded-xl my-5"
                     variants={fadeIn('down', 0.2)}
                     initial={'hidden'}
                     whileInView={'show'}
                     viewport={{ once: true }}>  
-           <motion.img  className="md:h-[200px] md:w-[300px] h-[170px] w-full rounded transition duration-200 ease-in"
+           <motion.img  className="md:h-[200px] md:w-[300px] h-[100px] w-full rounded transition duration-200 ease-in"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         key={project} src={project} alt=""/>

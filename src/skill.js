@@ -7,6 +7,16 @@ import { faCode } from '@fortawesome/free-solid-svg-icons';
 library.add( faHtml5, faCss3, faJs, faGithub, faGitAlt, faCode, faReact )
 function Skills(){
 
+    const tools = [
+        {icon: 'fa-brands fa-html5', name: 'HTML5'},
+        {icon: 'fa-brands fa-css3', name: 'CSS'},
+        {icon: 'fa-brands fa-js', name: 'JavaScript'},
+        {icon: 'fa-solid fa-code', name: 'Tailwind css'},
+        {icon: 'fa-brands fa-git-alt', name: 'Git'},
+        {icon: 'fa-brands fa-github', name: 'Github'},
+        {icon: 'fa-brands fa-react', name: 'React'},
+    ]
+
     return(
         <div className="border md:overflow-hidden font-itim overflow-scroll bg-background p-[30px] md:h-svh h-[85%] w-svw md:items-center flex md:flex-row md:flex-wrap flex-col 
     md:justify-evenly border-black">
@@ -19,20 +29,20 @@ function Skills(){
                 <p>My Technical Level</p>
             </motion.div>
             
-            <div className="border border-black md:h-fit md:w-full rounded-md text-center mx-auto my-10 px-8 pb-10">
-                <h1 className='text-xl my-6'>Frontend Developer</h1>
+            <div className="border border-black md:h-fit md:w-full rounded-md text-center mx-auto my-5 px-8 pb-10">
+                <h1 className='text-xl mt-4 md:my-6'>Frontend Developer</h1>
                     <motion.ul className="grid md:grid-cols-3 gap-5 md:text-3xl text-xl text-center"
                                 variants={fadeIn('up', 0.3)}
                                 initial="hidden"
                                 whileInView={'show'}
                                 viewport={{once: false, amount:0.7}}>
-                        <li><FontAwesomeIcon icon="fa-brands fa-html5" />HTML <hr className='border border-black w-1/2 mx-auto' /></li>
-                        <li><FontAwesomeIcon icon="fa-brands fa-css3" />CSS <hr className='border border-black w-1/2 mx-auto' /></li>
-                        <li><FontAwesomeIcon icon="fa-brands fa-js" />JavaScript <hr className='border border-black w-1/2 mx-auto' /></li>
-                        <li><FontAwesomeIcon icon="fa-solid fa-code" />Tailwind css <hr className='border border-black w-1/2 mx-auto' /></li>
-                        <li><FontAwesomeIcon icon="fa-brands fa-git-alt" />Git <hr className='border border-black w-1/2 mx-auto' /></li>
-                        <li><FontAwesomeIcon icon="fa-brands fa-github" />Github <hr className='border border-black w-1/2 mx-auto' /></li>
-                        <li><FontAwesomeIcon icon="fa-brands fa-react" />React <hr className='border border-black w-1/2 mx-auto' /></li>
+                        {tools.map((tool, index) => (
+                            <li key={index}><FontAwesomeIcon icon={tool.icon} />{tool.name}
+                            <motion.hr  class="border border-black mx-auto bg-black"            
+                                        initial={{ width: '0%' }}
+                                        whileInView={{ width: '50%' }}
+                                        transition={{ duration: 0.8, ease: "easeInOut" }} /></li>
+                        ))}
                     </motion.ul>
             </div>
         </div>

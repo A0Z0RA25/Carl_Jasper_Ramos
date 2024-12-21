@@ -14,7 +14,7 @@ function Navbar({ onClickNav }) {
 
   const icons = ['fa fa-house', 'fa fa-coffee', 'fa fa-user', 'fa fa-laptop', 'fa fa-envelope'];
   const navContainer = ['home', 'projects', 'about', 'skills', 'contact'];
-  const paths = ['/home', '/projects', '/about', '/skills', '/contact'];
+  const anchors = ['#home', '#projects', '#about', '#skills', '#contact'];
 
   return (
     <div className="fixed flex md:top-0 md:bottom-full bottom-5 left-0 mx-auto w-svw">
@@ -37,15 +37,15 @@ function Navbar({ onClickNav }) {
             }`}
             key={i}
           >
-            <Link
-              to={paths[i]}
+            <a
+              href={anchors[i]}
               onClick={() => {
                 setActiveIndex(i);
                 onClickNav(navContainer[i]);
               }}
             >
               <FontAwesomeIcon className="px-3 py-3" icon={icon.split(' ')} />
-            </Link>
+            </a>
           </li>
         ))}
 
@@ -59,9 +59,15 @@ function Navbar({ onClickNav }) {
             }`}
             key={index}
           >
-            <Link to={paths[index]} onClick={() => {setActiveIndex(index); onClickNav(nav);}}>
+            <a
+              href={anchors[index]}
+              onClick={() => {
+                setActiveIndex(index);
+                onClickNav(nav);
+              }}
+            >
               {nav.toUpperCase()}
-            </Link>
+            </a>
           </li>
         ))}
       </motion.ul>

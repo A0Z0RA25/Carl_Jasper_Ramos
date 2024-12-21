@@ -36,7 +36,7 @@ function Hero(){
                           variants={fadeIn('up', 0.2)}
                           initial="hidden"
                           whileInView={'show'}
-                          viewport={{once: false, amount:0.7}}>A highschooler who dreams to earn money in a young age by becoming a webdev.</motion.p> 
+                          viewport={{once: false, amount:0.7}}>A student who's studying web development.</motion.p> 
             </div>
             
 
@@ -49,7 +49,7 @@ function Hero(){
 
             <ul className='flex justify-evenly w-[200px]'>
                 {socMed.map((soc, index) => (
-                        <motion.li className='font-agrandir font-bold shadow-md z-10 border border-black'
+                        <motion.li className='font-agrandir hover:text-white hover:bg-banner font-bold shadow-md z-10 border border-black'
                             variants={fadeIn('up', 0.4)}
                             initial="hidden"
                             whileInView={'show'}
