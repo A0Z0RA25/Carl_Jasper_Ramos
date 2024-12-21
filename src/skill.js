@@ -8,7 +8,7 @@ library.add( faHtml5, faCss3, faJs, faGithub, faGitAlt, faCode, faReact )
 function Skills(){
 
     return(
-        <div className="border md:overflow-hidden overflow-scroll bg-background p-[30px] md:h-svh h-[85%] w-svw md:items-center flex md:flex-row md:flex-wrap flex-col 
+        <div className="border md:overflow-hidden font-itim overflow-scroll bg-background p-[30px] md:h-svh h-[85%] w-svw md:items-center flex md:flex-row md:flex-wrap flex-col 
     md:justify-evenly border-black">
             <motion.div className="text-center md:mt-10"
                         variants={fadeIn('up', 0.2)}

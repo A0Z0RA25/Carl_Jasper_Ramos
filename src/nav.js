@@ -52,9 +52,9 @@ function Navbar({ onClickNav }) {
         {/* Desktop View Links */}
         {navContainer.map((nav, index) => (
           <li
-            className={`cursor-pointer font-itim font-bold md:pt-5 md:px-6 md:rounded-bl-full md:rounded-br-full z-10 hidden md:flex items-center relative text-[20px] ${
+            className={`cursor-pointer hover:text-white font-itim font-bold md:pt-5 md:px-6 md:rounded-bl-full md:rounded-br-full z-10 hidden md:flex items-center relative text-[20px] ${
               activeIndex === index
-                ? 'text-white translate-y-0 z-30 md:mt-5 md:py-10 h-[150px] bg-banner transition-all ease-linear duration-300'
+                ? 'text-white translate-y-0 z-30 md:mt-0 md:py-10 h-[150px] bg-banner transition-all ease-linear duration-300'
                 : 'text-black'
             }`}
             key={index}

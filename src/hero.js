@@ -16,9 +16,9 @@ library.add(faTwitter, faFacebook, faGithub, faCoffee, faEnvelope, faUser);
 function Hero(){
 
     const socMed = [
-        { icon: ['fab', 'facebook'], name: 'Facebook' },
-        { icon: ['fab', 'twitter'], name: 'Twitter' },
-        { icon: ['fab', 'github'], name: 'Github' },
+        { icon: ['fab', 'facebook'], name: 'Facebook', link: 'https://www.facebook.com/carljaspera.ramos/' },
+        { icon: ['fab', 'twitter'], name: 'Twitter', link: 'https://www.facebook.com/carljaspera.ramos/' },
+        { icon: ['fab', 'github'], name: 'Github', link: 'https://github.com/A0Z0RA25' },
     ];
 
     return(
@@ -53,10 +53,14 @@ function Hero(){
                             variants={fadeIn('up', 0.4)}
                             initial="hidden"
                             whileInView={'show'}
-                            viewport={{once: false, amount:0.7}} 
+                            viewport={{once: false, amount:0.7}}
+                            whileHover={{y: -10}} 
                              key={index}>
-                                <FontAwesomeIcon className="px-6" icon={soc.icon} />
-                                <hr class=" bg-black" />
+                                <a href={soc.link}>
+                                  <FontAwesomeIcon className="px-6" icon={soc.icon} />
+                                  <hr class=" bg-black" />  
+                                </a>
+                                
                             </motion.li>
                     ))}
             </ul>
@@ -64,7 +68,7 @@ function Hero(){
         </div>
 
         <div className='my-10 md:my-0 mx-auto'>
-            <motion.img className='h-[200px] w-[250px] md:h-[450px] md:w-[480px] rounded-lg'
+            <motion.img className='h-[200px] w-[250px] md:h-[400px] md:w-[450px] rounded-lg'
                         variants={fadeIn('up', 0.2)}
                         initial="hidden"
                         whileInView={'show'}
