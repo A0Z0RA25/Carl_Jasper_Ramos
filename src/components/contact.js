@@ -1,18 +1,14 @@
 import { motion } from 'framer-motion';
-import { fadeIn } from './variants.js';
+import { fadeIn } from '../variants.js';
 function Contact(){
 
 
     return(
-        <div className="border md:overflow-hidden font-itim overflow-scroll bg-background py-[31.5px] px-2 md:h-svh h-[85%] w-svw md:items-center flex md:flex-column md:flex-wrap flex-col 
-    md:justify-evenly border-black">
-            <h1 className="text-center text-2xl md:mt-8">Contact Me</h1>
+        <div className="font-itim px-2 md:py-5">
+            <h1 className="text-center text-2xl">Contact Me</h1>
 
-            <motion.form className="mx-auto border rounded-lg py-[10px] px-[10px] md:w-[600px] my-auto w-full border-black" action=""
-                        variants={fadeIn('up', 0.2)}
-                        initial="hidden"
-                        whileInView={'show'}
-                        viewport={{once: false, amount:0.7}}>
+            <motion.form className="mx-auto text-center md:text-left px-2 md:border rounded-lg md:py-[10px] md:px-[10px] md:w-[400px] my-auto w-full border-black" action=""
+                         >
                 <div>
                     <label className="block" htmlFor="name">Name:</label>
                     <input className="block w-full border focus:bg-transparent focus:border-green-400 px-1 border-black bg-transparent border-t-0 border-x-0" placeholder="Enter your name" name="name" type="text" />

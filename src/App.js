@@ -1,34 +1,39 @@
 import './App.css';
-import Hero from './hero.js';
-import Navbar from './nav.js';
-import Projects from './projects.js';
-import About from './about.js';
-import Skills from './skill.js';
-import Contact from './contact.js';
+import Hero from './components/hero.js';
+import Navbar from './components/mainpage.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTwitter, faFacebook, faPinterest, faGithub, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { BrowserRouter } from 'react-router-dom';
+import Skills from './components/skill.js';
+import About from './components/about.js';
 import { useState } from 'react';
 
 library.add(faTwitter, faFacebook, faPinterest, faGithub, faWhatsapp, faInstagram, faHouse, faUser);
 
 function App() {
-  const [showSection, setShowSection] = useState('home');
 
-  function handleClickSection(section) {
-    setShowSection(section);
+  const [showInfo, setShowInfo] = useState(false);
+
+  const handleShowInfo = () => {
+    setShowInfo(!showInfo)
+    console.log(showInfo, "working")
   }
 
   return (
-      <div className='container m-0 p-0 bg-background md:h-svh md:w-svw w-svw h-svh'> 
-        <Navbar onClickNav={handleClickSection} />
-        {showSection === "home" && <Hero />}
-        {showSection === "projects" && <Projects />}
-        {showSection === "about" && <About />}
-        {showSection === "skills" && <Skills />}
-        {showSection === "contact" && <Contact />}
-      </div>
+      <BrowserRouter>
+        <div className='flex md:flex-row flex-col w-screen md:h-screen h-full py-5 bg-background px-2'>
+          <div>
+            <Hero showInfo={showInfo} handleShowInfo={handleShowInfo} />
+          </div>
+          <div className='w-full'>
+            <Navbar />
+          </div>
+            
+        </div>
+        
+      </BrowserRouter>
   );
 }
 

@@ -1,6 +1,6 @@
-import myImg from './myImg.jpg';
+import myImg from '../assets/myImg.jpg';
 import { motion } from 'framer-motion';
-import { fadeIn } from './variants.js';
+import { fadeIn } from '../variants.js';
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -8,12 +8,13 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 // Import specific icons
 import { faTwitter, faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCoffee, faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons';
+import Skills from './skill.js';
 
 
 // Add icons to library
 library.add(faTwitter, faFacebook, faGithub, faCoffee, faEnvelope, faUser);
 
-function Hero(){
+function Hero({showInfo, handleShowInfo}){
 
     const socMed = [
         { icon: ['fab', 'facebook'], name: 'Facebook', link: 'https://www.facebook.com/carljaspera.ramos/' },
@@ -22,38 +23,36 @@ function Hero(){
     ];
 
     return(
-    <div className="border md:overflow-hidden overflow-scroll bg-background p-[30px] md:m-0  md:h-svh h-[90%] w-svw md:items-center flex md:flex-row md:flex-wrap flex-col 
-                    md:justify-evenly border-black">
-        <div className='flex flex-col justify-evenly md:justify-between md:h-[300px]'>
-            <div className='text-center md:w-[600px]'>
-                <motion.h1 className='text-[24px] md:text-[50px] font-itim'
+    <div className="relative bg-background h-fit rounded border border-black md:mx-2 mb-2 w-full">
+        <div className='flex flex-col md:gap-y-10 justify-evenly md:justify-between md:py-3 md:px-2'>
+            <div className='text-center'>
+                <motion.h1 className='font-itim'
                             variants={fadeIn('up', 0.2)}
                             initial="hidden"
                             whileInView={'show'}
-                            viewport={{once: false, amount:0.7}}
+                            viewport={{once: true}}
                             >CARL JASPER RAMOS</motion.h1>
                 <motion.p className='md:text-[23px] text-center font-itim'
                           variants={fadeIn('up', 0.2)}
                           initial="hidden"
                           whileInView={'show'}
-                          viewport={{once: false, amount:0.7}}>A student who's studying web development.</motion.p> 
+                          viewport={{once: true}}>A student who's studying web development.</motion.p> 
             </div>
-            
-
-            <div className='mx-auto md:mx-0 font-itim'>
+        <div className={`${showInfo ? "block" : "hidden md:block"}`}>
+            <div className='relative mx-auto md:mx-0 font-itim'>
                 <motion.h1 className='my-2'
                     variants={fadeIn('up', 0.3)}
                     initial="hidden"
                     whileInView={'show'}
-                    viewport={{once: false, amount:0.7}}>You can follow me:</motion.h1>
+                    viewport={{once: true}}>You can follow me:</motion.h1>
 
-            <ul className='flex justify-evenly w-[200px]'>
+                <ul className='flex justify-evenly w-[200px]'>
                 {socMed.map((soc, index) => (
                         <motion.li className='font-agrandir hover:text-white hover:bg-banner font-bold shadow-md z-10 border border-black'
                             variants={fadeIn('up', 0.4)}
                             initial="hidden"
                             whileInView={'show'}
-                            viewport={{once: false, amount:0.7}}
+                            viewport={{once: true}}
                             whileHover={{y: -10}} 
                              key={index}>
                                 <a href={soc.link}>
@@ -61,20 +60,16 @@ function Hero(){
                                   <hr class=" bg-black" />  
                                 </a>
                                 
-                            </motion.li>
+                        </motion.li>
                     ))}
-            </ul>
+                </ul>
+            </div>
+            {/* tools */}
+            <Skills />
         </div>
+        <button className={`text-center border border-black w-full my-2 text-sm font-semibold md:hidden`} onClick={() => handleShowInfo()}>{showInfo ? "Close" : "Show"}</button>
         </div>
-
-        <div className='my-10 md:my-0 mx-auto'>
-            <motion.img className='h-[200px] w-[250px] md:h-[400px] md:w-[450px] rounded-lg'
-                        variants={fadeIn('up', 0.2)}
-                        initial="hidden"
-                        whileInView={'show'}
-                        viewport={{once: false, amount:0.7}} 
-                        src={myImg} alt="" />
-        </div>
+        
     </div>
 )
 }

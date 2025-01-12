@@ -1,14 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
-        'background': '#e7dfd8',
-        'banner': '#6d5e60',
+        'background': '#FEF9E1',
+        'banner': '#A31D1D',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
