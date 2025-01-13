@@ -4,8 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'background': '#FEF9E1',
-        'banner': '#A31D1D',
+        back: '#526D82',
+        banner : '#27374D',
+        contentCol : "#ffffff",
+        text: '#DDE6ED',
+        add: '#9DB2BF'
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

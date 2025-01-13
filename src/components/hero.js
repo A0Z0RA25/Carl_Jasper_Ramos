@@ -1,7 +1,6 @@
-import myImg from '../assets/myImg.jpg';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants.js';
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
@@ -23,7 +22,7 @@ function Hero({showInfo, handleShowInfo}){
     ];
 
     return(
-    <div className="relative bg-background h-fit rounded border border-black md:mx-2 mb-2 w-full">
+    <div className="relative text-contentCol bg-banner h-fit rounded border border-white md:mx-2 mb-2 w-full">
         <div className='flex flex-col md:gap-y-10 justify-evenly md:justify-between md:py-3 md:px-2'>
             <div className='text-center'>
                 <motion.h1 className='font-itim'
@@ -48,12 +47,12 @@ function Hero({showInfo, handleShowInfo}){
 
                 <ul className='flex justify-evenly w-[200px]'>
                 {socMed.map((soc, index) => (
-                        <motion.li className='font-agrandir hover:text-white hover:bg-banner font-bold shadow-md z-10 border border-black'
+                        <motion.li className='font-agrandir hover:bg-white hover:text-black font-bold shadow-md z-10 border'
                             variants={fadeIn('up', 0.4)}
                             initial="hidden"
                             whileInView={'show'}
                             viewport={{once: true}}
-                            whileHover={{y: -10}} 
+                            whileHover={{y: -5}} 
                              key={index}>
                                 <a href={soc.link}>
                                   <FontAwesomeIcon className="px-6" icon={soc.icon} />

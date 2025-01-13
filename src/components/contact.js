@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { fadeIn } from '../variants.js';
 function Contact(){
 
 
@@ -7,7 +6,7 @@ function Contact(){
         <div className="font-itim px-2 md:py-5">
             <h1 className="text-center text-2xl">Contact Me</h1>
 
-            <motion.form className="mx-auto text-center md:text-left px-2 md:border rounded-lg md:py-[10px] md:px-[10px] md:w-[400px] my-auto w-full border-black" action=""
+            <motion.form className="mx-auto text-center md:text-left px-2 md:border rounded-lg md:py-[10px] md:px-[10px] md:w-[400px] my-auto w-full" action=""
                          >
                 <div>
                     <label className="block" htmlFor="name">Name:</label>

@@ -6,8 +6,6 @@ import { faTwitter, faFacebook, faPinterest, faGithub, faWhatsapp, faInstagram }
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { BrowserRouter } from 'react-router-dom';
-import Skills from './components/skill.js';
-import About from './components/about.js';
 import { useState } from 'react';
 
 library.add(faTwitter, faFacebook, faPinterest, faGithub, faWhatsapp, faInstagram, faHouse, faUser);
@@ -23,16 +21,14 @@ function App() {
 
   return (
       <BrowserRouter>
-        <div className='flex md:flex-row flex-col w-screen md:h-screen h-full py-5 bg-background px-2'>
+        <div className='flex md:flex-row flex-col w-screen md:h-screen h-full py-5 bg-back px-2'>
           <div>
             <Hero showInfo={showInfo} handleShowInfo={handleShowInfo} />
           </div>
           <div className='w-full'>
             <Navbar />
           </div>
-            
         </div>
-        
       </BrowserRouter>
   );
 }
