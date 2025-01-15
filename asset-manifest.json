@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/Carl_Jasper_Ramos/static/css/main.1cec6582.css",
-    "main.js": "/Carl_Jasper_Ramos/static/js/main.61ef04d4.js",
-    "static/js/488.b2f448f2.chunk.js": "/Carl_Jasper_Ramos/static/js/488.b2f448f2.chunk.js",
-    "static/media/myImg.jpg": "/Carl_Jasper_Ramos/static/media/myImg.7d4e48c9a1665fbbcf41.jpg",
-    "static/media/react.png": "/Carl_Jasper_Ramos/static/media/react.2f2532db663fd5ec5f95.png",
-    "static/media/tailwind.png": "/Carl_Jasper_Ramos/static/media/tailwind.3549d9e451d7abb96934.png",
-    "static/media/javascript.png": "/Carl_Jasper_Ramos/static/media/javascript.166865dacb77d214f485.png",
-    "index.html": "/Carl_Jasper_Ramos/index.html",
-    "main.1cec6582.css.map": "/Carl_Jasper_Ramos/static/css/main.1cec6582.css.map",
-    "main.61ef04d4.js.map": "/Carl_Jasper_Ramos/static/js/main.61ef04d4.js.map",
-    "488.b2f448f2.chunk.js.map": "/Carl_Jasper_Ramos/static/js/488.b2f448f2.chunk.js.map"
+    "main.css": "/static/css/main.6dc02497.css",
+    "main.js": "/static/js/main.50a58a81.js",
+    "static/js/488.b2f448f2.chunk.js": "/static/js/488.b2f448f2.chunk.js",
+    "static/media/cakeShop.png": "/static/media/cakeShop.65eddc4d74196dd63d35.png",
+    "static/media/myImg.jpg": "/static/media/myImg.7d4e48c9a1665fbbcf41.jpg",
+    "static/media/react.png": "/static/media/react.2f2532db663fd5ec5f95.png",
+    "static/media/tailwind.png": "/static/media/tailwind.3549d9e451d7abb96934.png",
+    "static/media/javascript.png": "/static/media/javascript.166865dacb77d214f485.png",
+    "index.html": "/index.html",
+    "main.6dc02497.css.map": "/static/css/main.6dc02497.css.map",
+    "main.50a58a81.js.map": "/static/js/main.50a58a81.js.map",
+    "488.b2f448f2.chunk.js.map": "/static/js/488.b2f448f2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1cec6582.css",
-    "static/js/main.61ef04d4.js"
+    "static/css/main.6dc02497.css",
+    "static/js/main.50a58a81.js"
   ]
 }
