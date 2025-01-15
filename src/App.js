@@ -21,7 +21,7 @@ function App() {
 
   return (
       <BrowserRouter>
-        <div className='flex md:flex-row flex-col w-screen md:h-screen h-full py-5 bg-back px-2'>
+        <div className='flex md:flex-row flex-col w-screen md:h-screen min-h-screen max-h-full py-5 bg-back px-2'>
           <div>
             <Hero showInfo={showInfo} handleShowInfo={handleShowInfo} />
           </div>

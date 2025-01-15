@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { easeIn, easeInOut, motion } from 'framer-motion';
 import { fadeIn } from '../variants.js';
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,40 +22,41 @@ function Hero({showInfo, handleShowInfo}){
     ];
 
     return(
-    <div className="relative text-contentCol bg-banner h-fit rounded border border-white md:mx-2 mb-2 w-full">
+    <motion.div className="relative text-contentCol bg-banner h-fit rounded border border-white md:mx-2 md:py-0 py-3 mb-2 w-full"
+                initial={{opacity: 0}}
+                animate={{opacity: 100}}
+                transition={{duration: 0.5, animation: easeInOut}}>
         <div className='flex flex-col md:gap-y-10 justify-evenly md:justify-between md:py-3 md:px-2'>
             <div className='text-center'>
-                <motion.h1 className='font-itim'
-                            variants={fadeIn('up', 0.2)}
-                            initial="hidden"
-                            whileInView={'show'}
+                <motion.h1 className='font-itim text-2xl'
+                            initial={{opacity: 0, y: 10}}
+                            animate={{opacity: 100, y: 0}}
+                            transition={{duration: 2, animation: easeInOut}}
                             viewport={{once: true}}
                             >CARL JASPER RAMOS</motion.h1>
                 <motion.p className='md:text-[23px] text-center font-itim'
-                          variants={fadeIn('up', 0.2)}
-                          initial="hidden"
-                          whileInView={'show'}
+                          initial={{opacity: 0, y: 10}}
+                          animate={{opacity: 100, y: 0}}
+                          transition={{duration: 2, animation: easeInOut}}
                           viewport={{once: true}}>A student who's studying web development.</motion.p> 
             </div>
         <div className={`${showInfo ? "block" : "hidden md:block"}`}>
             <div className='relative mx-auto md:mx-0 font-itim'>
                 <motion.h1 className='my-2'
-                    variants={fadeIn('up', 0.3)}
-                    initial="hidden"
-                    whileInView={'show'}
+                    initial={{opacity: 0, y: 10}}
+                    animate={{opacity: 100, y: 0}}
+                    transition={{duration: 2, animation: easeInOut}}
                     viewport={{once: true}}>You can follow me:</motion.h1>
 
                 <ul className='flex justify-evenly w-[200px]'>
                 {socMed.map((soc, index) => (
-                        <motion.li className='font-agrandir hover:bg-white hover:text-black font-bold shadow-md z-10 border'
-                            variants={fadeIn('up', 0.4)}
-                            initial="hidden"
-                            whileInView={'show'}
-                            viewport={{once: true}}
-                            whileHover={{y: -5}} 
-                             key={index}>
+                        <motion.li key={index} className='font-agrandir group font-bold shadow-md z-10 mx-2'
+                        initial={{opacity: 0, y: 10}}
+                        animate={{opacity: 100, y: 0}}
+                        transition={{duration: 2, animation: easeInOut}}
+                        viewport={{once: true}}>
                                 <a href={soc.link}>
-                                  <FontAwesomeIcon className="px-6" icon={soc.icon} />
+                                  <FontAwesomeIcon className="px-6 group-hover:-translate-y-2 duration-300 ease-in-out group-hover:text-white py-1 group-hover:border-none" icon={soc.icon} />
                                   <hr class=" bg-black" />  
                                 </a>
                                 
@@ -69,7 +70,7 @@ function Hero({showInfo, handleShowInfo}){
         <button className={`text-center border border-black w-full my-2 text-sm font-semibold md:hidden`} onClick={() => handleShowInfo()}>{showInfo ? "Close" : "Show"}</button>
         </div>
         
-    </div>
+    </motion.div>
 )
 }
 
