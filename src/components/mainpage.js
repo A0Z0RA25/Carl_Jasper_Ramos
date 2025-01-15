@@ -7,7 +7,7 @@ import Contact from './contact.js';
 function Navbar() {
 
   const list = [
-    {id: 1, name: "About", link: "/", icon: "fa fa-user"},
+    {id: 1, name: "About", link: "/Carl_Jasper_Ramos", icon: "fa fa-user"},
     {id: 2, name: "Projects", link: "/Projects", icon: "fa fa-coffee"},
     {id: 3, name: "Contact", link: "/Contact", icon: "fa fa-envelope"},
   ]
@@ -22,7 +22,7 @@ function Navbar() {
 
         <div>
           <Routes>
-            <Route path="/" element={<About />} />
+            <Route path="/Carl_Jasper_Ramos" element={<About />} />
             <Route path="/Projects" element={<Projects />} />
             <Route path="/Contact" element={<Contact />} />
           </Routes>
