@@ -1,17 +1,14 @@
 import { easeIn, easeInOut, motion } from 'framer-motion';
-import { fadeIn } from '../variants.js';
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 // Import specific icons
-import { faTwitter, faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faCoffee, faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import Skills from './skill.js';
 
 
-// Add icons to library
-library.add(faTwitter, faFacebook, faGithub, faCoffee, faEnvelope, faUser);
+
 
 function Hero({showInfo, handleShowInfo}){
 
@@ -40,15 +37,19 @@ function Hero({showInfo, handleShowInfo}){
                           transition={{duration: 2, animation: easeInOut}}
                           viewport={{once: true}}>A student who's studying web development.</motion.p> 
             </div>
-        <div className={`${showInfo ? "block" : "hidden md:block"}`}>
-            <div className='relative mx-auto md:mx-0 font-itim'>
+        <motion.div className={`${showInfo ? "block" : "hidden md:block"}`}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}>
+            <div className='relative px-2 md:mx-0 font-itim'>
                 <motion.h1 className='my-2'
                     initial={{opacity: 0, y: 10}}
                     animate={{opacity: 100, y: 0}}
                     transition={{duration: 2, animation: easeInOut}}
                     viewport={{once: true}}>You can follow me:</motion.h1>
 
-                <ul className='flex justify-evenly w-[200px]'>
+                <ul className='flex md:justify-evenly'>
                 {socMed.map((soc, index) => (
                         <motion.li key={index} className='font-agrandir group font-bold shadow-md z-10 mx-2'
                         initial={{opacity: 0, y: 10}}
@@ -57,7 +58,7 @@ function Hero({showInfo, handleShowInfo}){
                         viewport={{once: true}}>
                                 <a href={soc.link}>
                                   <FontAwesomeIcon className="px-6 group-hover:-translate-y-2 duration-300 ease-in-out group-hover:text-white py-1 group-hover:border-none" icon={soc.icon} />
-                                  <hr class=" bg-black" />  
+                                  <hr /> 
                                 </a>
                                 
                         </motion.li>
@@ -66,8 +67,10 @@ function Hero({showInfo, handleShowInfo}){
             </div>
             {/* tools */}
             <Skills />
-        </div>
-        <button className={`text-center border border-black w-full my-2 text-sm font-semibold md:hidden`} onClick={() => handleShowInfo()}>{showInfo ? "Close" : "Show"}</button>
+        </motion.div>
+        <button className={`text-center text-xl text-white w-full my-2 font-semibold md:hidden`} onClick={() => handleShowInfo()}>
+            <FontAwesomeIcon icon={showInfo ? faCaretUp : faCaretDown} />      
+        </button>
         </div>
         
     </motion.div>

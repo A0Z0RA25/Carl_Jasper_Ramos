@@ -15,6 +15,7 @@ function App() {
   const [showInfo, setShowInfo] = useState(false);
 
   const handleShowInfo = () => {
+   
     setShowInfo(!showInfo)
     console.log(showInfo, "working")
   }

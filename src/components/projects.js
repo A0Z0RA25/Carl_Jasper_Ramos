@@ -66,10 +66,14 @@ function Projects(){
                                             />
                             </AnimatePresence>
                             </div>
-                            <div className="border px-3">
+                            <div className="px-3">
                                 <h1 className="md:text-xl text-xl font-semibold">{pro.title}</h1>
-                                <hr className="border md:w-[300px] mx-auto" />
+                                <hr className="w-1/2 mx-auto" />
                                 <p className="text-lg">{pro.descrip}</p>
+                                <div className="flex justify-evenly mt-5">
+                                    <button className="bg-orange-500 px-2 rounded"><a href="https://github.com/A0Z0RA25/cake_shop">Github</a></button>
+                                    <button className="bg-orange-500 px-2 rounded"><a href="https://a0z0ra25.github.io/cake_shop/">Live view</a></button>
+                                </div>
                             </div>
                         </div>
                     ))}
